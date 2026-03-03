@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Clearfix */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Column Structure */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* Header */
+.header {
+    background-color: #00264d;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Menu */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #007acc;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    background-color: #005c99;
+}
+
+/* Content */
+.content {
+    background-color: white;
+}
+
+/* Aside */
+.aside {
+    background-color: #e6f2ff;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #00264d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ========================= */
+/* Mobile First (Default) */
+/* ========================= */
+
+[class*="col-"] {
+    width: 100%;
+}
+
+/* ========================= */
+/* Tablet View (≥600px) */
+/* ========================= */
+
+@media only screen and (min-width: 600px) {
+
+    .col-s-3 {width: 25%;}
+    .col-s-6 {width: 50%;}
+    .col-s-9 {width: 75%;}
+    .col-s-12 {width: 100%;}
+}
+
+/* ========================= */
+/* Desktop View (≥768px) */
+/* ========================= */
+
+@media only screen and (min-width: 768px) {
+
+    .col-3 {width: 25%;}
+    .col-6 {width: 50%;}
+    .col-9 {width: 75%;}
+    .col-12 {width: 100%;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>ABC College</h1>
+    <p>Empowering Education Through Excellence</p>
+</div>
+
+<div class="row">
+
+    <!-- Menu -->
+    <div class="col-3 col-s-3 menu">
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Courses</li>
+            <li>Admissions</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="col-6 col-s-9 content">
+        <h2>About Our College</h2>
+        <p>
+            ABC College provides quality education in various disciplines.
+            We focus on academic excellence, innovation, research, and
+            holistic student development.
+        </p>
+
+        <h3>Our Mission</h3>
+        <p>
+            To nurture skilled professionals and responsible citizens
+            through value-based education.
+        </p>
+    </div>
+
+    <!-- Aside -->
+    <div class="col-3 col-s-12">
+        <div class="aside">
+            <h3>Notice Board</h3>
+            <p>📢 Admissions Open for 2025-26</p>
+            <p>🎉 Annual Cultural Fest in March</p>
+            <p>📅 Mid-Sem Exams from April 10</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>© 2025 ABC College | All Rights Reserved</p>
+</div>
+
+</body>
+</html>
